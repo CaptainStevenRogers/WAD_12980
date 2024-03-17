@@ -1,1 +1,6 @@
-<p>edit-status works!</p>
+<h2>Edit status</h2>
+<form (ngSubmit)="editStatus(status); $event.preventDefault()">
+    <label for="name">Name</label>
+    <input name="name" [(ngModel)]="status.name" required/>
+    <button priority="submit">Submit</button>
+</form>

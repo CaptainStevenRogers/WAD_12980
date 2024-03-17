@@ -1,1 +1,6 @@
-<p>create-status works!</p>
+<h2>Create status</h2>
+<form (ngSubmit)="createStatus(); $event.preventDefault()">
+    <label for="name">Name</label>
+    <input name="name" [(ngModel)]="status.name" required/>
+    <button priority="submit">Submit</button>
+</form>

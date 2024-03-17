@@ -1,1 +1,17 @@
-<p>edit-task works!</p>
+<h2>Edit task</h2>
+<form (ngSubmit)="editTask(task); $event.preventDefault()">
+    <label for="name">Name</label>
+    <input name="name" [(ngModel)]="task.name" required/>
+
+    <label for="description">Description</label>
+    <textarea name="description" [(ngModel)]="task.description" required></textarea>
+
+    <label for="name">Days To Complete</label>
+    <input name="daysToComplete" type="number" [(ngModel)]="task.daysToComplete" required/>
+
+    <select class="form-control" id="status" name="Status" [(ngModel)]="task.status">
+        <option *ngFor="let status of statuses" [ngValue]="status">{{status.name}}</option>
+    </select>
+
+    <button priority="submit">Submit</button>
+</form>

@@ -1,1 +1,18 @@
-<p>all-statuses works!</p>
+<h2>Statuses</h2>
+<a [routerLink]="['/create-status']">Create status</a>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
+  @for(status of statuses; track $index){
+    <tr>
+        <td>{{status.id}}</td>
+        <td>{{status.name}}</td>
+        <td>                
+            <a [routerLink]="['/edit-status', status.id]">Edit status</a> | <a [routerLink]="['/delete-status', status.id]">Delete status</a>
+        </td>
+    </tr>
+  }
+</table>

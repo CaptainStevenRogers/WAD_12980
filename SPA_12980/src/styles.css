@@ -1,0 +1,32 @@
+nav{
+    width: 50%;
+    display: flex;
+}
+nav a {
+    color: white;
+    background-color: rgb(97, 61, 255);
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+nav a:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 15px;
+  }

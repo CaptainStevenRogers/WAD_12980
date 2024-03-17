@@ -1,0 +1,24 @@
+<h2>Tasks</h2>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Days To Complete</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+  @for(task of tasks; track $index){
+    <tr>
+        <td>{{task.id}}</td>
+        <td>{{task.name}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.daysToComplete}}</td>
+        <td>{{task.status.name}}</td>
+        <td>                
+            <a [routerLink]="['/edit-task', task.id]">Edit Task</a> | <a [routerLink]="['/delete-task', task.id]">Delete Task</a>
+        </td>
+    </tr>
+  }
+</table>
